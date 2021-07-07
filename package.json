@@ -1,0 +1,43 @@
+{
+  "name": "webpack4.x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "build:mpa": "webpack --config mpa.webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.6",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.2",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "mini-css-extract-plugin": "^1.6.2",
+    "postcss-loader": "^4.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
