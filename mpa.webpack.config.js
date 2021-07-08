@@ -42,6 +42,7 @@ module.exports = {
   entry,
   output: {
     filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "./mpa"),
   },
   mode: "development",
   module: {
