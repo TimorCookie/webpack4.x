@@ -11,6 +11,9 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
   },
+  resolveLoader: {
+    modules: ["node_modules", path.resolve(__dirname, "./myLoaders/")],
+  },
   mode: "development",
   module: {
     rules: [
@@ -21,10 +24,13 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "less-loader",
+          // MiniCssExtractPlugin.loader,
+          // "css-loader",
+          // "postcss-loader",
+          // "less-loader",
+          "myStyle-loader",
+          "myCss-loader",
+          "myLess-loader",
         ],
       },
       {
@@ -77,9 +83,9 @@ module.exports = {
           //       ],
           //     },
           //   },
-          path.resolve(__dirname, "./myLoaders/replace-loader-async.js"),
+          "replace-loader-async",
           {
-            loader: path.resolve(__dirname, "./myLoaders/replace-loader.js"),
+            loader: "replace-loader",
             options: {
               str: "hi",
             },
