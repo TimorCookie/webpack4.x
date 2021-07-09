@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const webpack = require("webpack")
-const { options } = require("less")
+const TestWebpackPlugin = require("./myPlugins/test-webpack-plugin")
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -102,6 +102,9 @@ module.exports = {
     hotOnly: true,
   },
   plugins: [
+    new TestWebpackPlugin({
+      name: "timokie",
+    }),
     new htmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
